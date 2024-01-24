@@ -14,7 +14,7 @@ const routes: Routes = [
         children:[
             {path:'', component: DashboardComponent},
             {path: 'progress', component: ProgressComponent},
-            {path: 'grafica1', component: Graficas1Component},
+            {path: 'grafics1', component: Graficas1Component},
         ]
       },
 ];

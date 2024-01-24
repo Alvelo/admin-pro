@@ -10,6 +10,11 @@ import { FormsModule } from '@angular/forms';
 import { ComponentsModule } from '../components/components.module';
 
 
+import { NgChartsModule } from 'ng2-charts';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +28,8 @@ import { ComponentsModule } from '../components/components.module';
     SharedModule,
     RouterModule,
     FormsModule,
-    ComponentsModule
+    NgChartsModule,
+    ComponentsModule,
   ],
   exports: [
     DashboardComponent, 

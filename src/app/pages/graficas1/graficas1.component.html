@@ -1,1 +1,22 @@
-<p>graficas1 works!</p>
+
+<!-- Show the grafics html -->
+<div class="row">
+    <div class="col-6">
+        <app-donuts title="Ventas"></app-donuts>
+    </div>
+
+    <div class="col-6">
+        <app-donuts title="Compras" [labels]="labels1"[data]="data1"></app-donuts>
+       </div>
+</div>
+
+<!-- Show the grafics html -->
+<div class="row">
+    <div class="col-6">
+        <app-donuts title="Cambios"></app-donuts>
+    </div>
+
+    <div class="col-6">
+        <app-donuts title="Nuevo"></app-donuts>
+       </div>
+</div>

@@ -9,7 +9,12 @@
         </button>
     </span>
 
-    <input type="text" class="form-control" placeholder="Progress" [(ngModel)]="progress">
+    <input type="text" 
+            class="form-control" 
+            placeholder="Progress"
+            [ngClass]="{'is-invalid': progress > 100 || progress < 0}" 
+            (ngModelChange)="onChange($event)" 
+            [(ngModel)]="progress">
 
     <span class="input-group-btn">
         <button [ngClass]="btnClass"  

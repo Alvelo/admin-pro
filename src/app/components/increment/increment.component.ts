@@ -36,4 +36,23 @@ export class IncrementComponent implements OnInit {
 
     
   }
+
+
+  onChange(value: number) {
+    if( value >= 100){
+      
+      this.progress = 100;
+      
+    } else if(value <= 0) {
+
+      this.progress = 0;
+    }else {
+      this.progress = value;
+    }
+    
+
+    this.outputValue.emit(this.progress);
+
+
+  }
 }
