@@ -12,6 +12,7 @@ import { ComponentsModule } from '../components/components.module';
 
 import { NgChartsModule } from 'ng2-charts';
 import { AccountSettingComponent } from './account-setting/account-setting.component';
+import { PromesaComponent } from './promesa/promesa.component';
 
 
 
@@ -23,7 +24,8 @@ import { AccountSettingComponent } from './account-setting/account-setting.compo
     ProgressComponent,
     Graficas1Component,
     PagesComponent,
-    AccountSettingComponent
+    AccountSettingComponent,
+    PromesaComponent
   ],
   imports: [
     CommonModule,
