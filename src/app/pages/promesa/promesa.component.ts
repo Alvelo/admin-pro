@@ -7,20 +7,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PromesaComponent implements OnInit {
   ngOnInit(): void {
-    const promesa = new Promise( (resolve, reject) => {
-      if(false){
-        resolve('resolvido');
-      } else {
-        reject('Ocurrio un error');
-      }
-    });
+    this.getUsers()
+    .then(resp => console.log('from calling onInit: ',{resp}))
+    
+    
+    
+    // const promesa = new Promise( (resolve, reject) => {
+    //   if(false){
+    //     resolve('resolvido');
+    //   } else {
+    //     reject('Ocurrio un error');
+    //   }
+    // });
   
-    promesa.then((data) => {
-      console.log(data);
-      console.log('Hey Termine');
-    }).catch(error => console.log('error en la promesa: ',error));
+    // promesa.then((data) => {
+    //   console.log(data);
+    //   console.log('Hey Termine');
+    // }).catch(error => console.log('error en la promesa: ',error));
 
-    console.log('Fin del Init');
+    // console.log('Fin del Init'); 
+
+    
+
+
+  }
+
+  getUsers() {
+    return new Promise(resolve => {
+      fetch('https://reqres.in/api/users')
+      .then((resp) => resp.json())
+      .then(body => resolve(body.data))
+    });
   }
 
 }
